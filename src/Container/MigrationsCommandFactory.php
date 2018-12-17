@@ -35,11 +35,11 @@ class MigrationsCommandFactory
     }
 
     /**
-     * @param $name
+     * @param string $name
      * @param array $arguments
      * @return mixed
      */
-    public static function __callStatic($name, array $arguments)
+    public static function __callStatic(string $name, array $arguments)
     {
         if (! array_key_exists(0, $arguments) || ! $arguments[0] instanceof ContainerInterface) {
             throw new Exception\DomainException(sprintf(
