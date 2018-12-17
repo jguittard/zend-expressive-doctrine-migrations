@@ -1,0 +1,55 @@
+{
+  "name": "zendframework/zend-expressive-doctrine-migrations",
+  "description": "Doctrine Migrations implementation for Zend Expressive",
+  "type": "library",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Julien Guittard",
+      "email": "julien.guittard@me.com"
+    }
+  ],
+  "config": {
+    "discard-changes": true
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/jguittard/zend-expressive-doctrine"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "zendframework/zend-expressive-doctrine": "^1.0@dev",
+    "doctrine/migrations": "2.0.x-dev"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.0",
+    "psr/container": "^1.0",
+    "squizlabs/php_codesniffer": "^2.5",
+    "zendframework/zend-coding-standard": "~1.0.0",
+    "phpstan/phpstan": "^0.10.6",
+    "phpstan/phpstan-strict-rules": "^0.10.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zend\\Expressive\\Doctrine\\Migrations\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ZendTest\\Expressive\\Doctrine\\Migrations\\": "test/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev",
+      "dev-develop": "1.1-dev"
+    },
+    "zf": {
+      "component": "Zend\\Expressive\\Doctrine\\Migrations",
+      "config-provider": "Zend\\Expressive\\Doctrine\\Migrations\\ConfigProvider"
+    }
+  }
+}
